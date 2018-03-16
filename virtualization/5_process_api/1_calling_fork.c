@@ -1,3 +1,15 @@
+/*
+    Q: Write a program that calls fork(). Before calling fork(), have the
+    main process access a variable (e.g., x) and set its value to
+    something (e.g., 100). What value is the variable in the child
+    process? What happens to the variable when both the child and
+    parent change the value of x?
+
+    A: After the fork, the value of the variable in both the child and
+    parent is 100. Each has its own copy of the variable and changing
+    the value of x in one does not change the value of x in the other.
+*/
+
 #include <stdio.h>
 #include <unistd.h> // fork
 #include <stdlib.h> // exit
